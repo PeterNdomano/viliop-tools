@@ -1,0 +1,22 @@
+{
+  "name": "viliop-tools",
+  "version": "1.0.0",
+  "description": "A collection of tools for viliop project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterNdomano/viliop-tools.git"
+  },
+  "keywords": [
+    "cybersec"
+  ],
+  "author": "PeterNdomano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterNdomano/viliop-tools/issues"
+  },
+  "homepage": "https://github.com/PeterNdomano/viliop-tools#readme"
+}
