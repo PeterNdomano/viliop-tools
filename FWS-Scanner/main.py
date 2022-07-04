@@ -5,14 +5,14 @@ import os
 from pathlib import Path
 
 #adding python_modules folder to path
-cwd = Path(os.getcwd());
-modulesFolder = os.path.join(cwd.parent, 'python_modules')
+currentDir = Path(__file__).parent;
+modulesFolder = os.path.join(Path(currentDir).parent, 'python_modules')
 sys.path.insert(0, modulesFolder)
 
 import requests
 
 def main(argv):
-    help_text = "{0} -u <targetUrl>".format(argv[0])
+    help_text = "{0} make sure url is valid, use -u <targetUrl>".format(argv[0])
     targetUrl = "";
 
     if len(argv) > 0:
