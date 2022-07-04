@@ -1,9 +1,13 @@
 # importing sys
 import sys
 import getopt
+import os
+from pathlib import Path
 
 #adding python_modules folder to path
-sys.path.insert(0, '../python_modules')
+cwd = Path(os.getcwd());
+modulesFolder = os.path.join(cwd.parent, 'python_modules')
+sys.path.insert(0, modulesFolder)
 
 import requests
 
