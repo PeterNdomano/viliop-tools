@@ -12,10 +12,10 @@ sys.path.insert(0, modulesFolder)
 import requests
 
 def main(argv):
-    help_text = "{0} make sure url is valid, use -u <targetUrl>".format(argv[0])
+    help_text = "{0} make sure url is valid and you're connected to the network, use -u <targetUrl> to specify target url".format(argv[0])
     targetUrl = "";
 
-    if len(argv) > 0:
+    if len(argv) > 1:
         try:
             opts, args = getopt.getopt(argv[1:], "u:", ["url="]) #getting cmd options
             for opt, arg in opts:
@@ -29,15 +29,19 @@ def main(argv):
                     else:
                         scanResponse("Could not Fingerprint the Web Server")
                 else:
-                    print(help_text)
+                    showHelp(argv)
         except:
-            print(help_text)
+            showHelp(argv)
     else:
-        print(help_text)
+        showHelp(argv)
 
 def scanResponse(response):
     print("SCAN OUTPUT:")
     print(response)
+
+def showHelp(argv):
+    help_text = "{0} make sure url is valid and you're connected to the network, use -u <targetUrl> to specify target url".format(argv[0])
+    print(help_text);
 
 def bannerGrabbing(url):
     req = requests.get(url)
