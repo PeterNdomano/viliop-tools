@@ -7,13 +7,14 @@
     ],
     "params": [
       {
-        "symbol": '-u',
+        "symbol": "-u",
         "description": "Target Url to be scanned"
       }
     ],
     "files": [
       "main.py",
-      "README.md"
+      "README.md",
+      "info.json"
     ],
     "version": "1"
   },
@@ -25,17 +26,18 @@
     ],
     "params": [
       {
-        "symbol": '-u',
+        "symbol": "-u",
         "description": "Target Url to be scanned"
       },
       {
-        "symbol": '-d',
+        "symbol": "-d",
         "description": "Directory to save scrapped files"
       }
     ],
     "files": [
       "main.py",
-      "README.md"
+      "README.md",
+      "info.json"
     ],
     "version": "1"
   }
