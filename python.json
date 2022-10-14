@@ -1,0 +1,6 @@
+{
+  "modules": [
+    "requests"
+  ],
+  "version": "3.10"
+}
