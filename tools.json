@@ -1,14 +1,16 @@
 [
   {
     "name": "FWS-Scanner",
-    "description": "FWS-Scanner description comes here",
+    "description": "This tool attempts to discover the WebServer powering a targeted site",
     "wstgIds": [
       "WSTG-INFO-02"
     ],
     "params": [
       {
         "symbol": "-u",
-        "description": "Target Url to be scanned"
+        "optional": false,
+        "description": "Target Domain to be scanned, eg mysite.com",
+        "type": "string"
       }
     ],
     "files": [
@@ -20,18 +22,22 @@
   },
   {
     "name": "Meta-Scrapper",
-    "description": "Meta-Scrapper description comes here",
+    "description": "Meta-Scrapper collects available Meta-data and Meta-files from the targeted domain",
     "wstgIds": [
       "WSTG-INFO-03"
     ],
     "params": [
       {
         "symbol": "-u",
-        "description": "Target Url to be scanned"
+        "description": "Target Domain to be scanned, eg mysite.com",
+        "optional": false,
+        "type": "string"
       },
       {
         "symbol": "-d",
-        "description": "Directory to save scrapped files"
+        "description": "Directory to save scrapped data & files",
+        "optional": false,
+        "type": "folderPath"
       }
     ],
     "files": [

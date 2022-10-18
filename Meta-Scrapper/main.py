@@ -19,9 +19,9 @@ def main(argv):
         opts, args = getopt.getopt(cmd_args, "d:u:", ["url=", "dir"])
         for opt, val in opts:
             if opt in ("-d", '--dir'):
-                dir = val
+                dir = val.strip();
             elif opt in ("-u", '--url'):
-                url = val
+                url = "http://"+val.strip();
 
         if(len(url) > 0 and len(dir) > 0):
             print("Meta Scrapper is starting......")
@@ -53,7 +53,7 @@ def scanForMetaTags(url):
 
 def scanWellKnowsDir(url):
     print('Scanning .well-known folder...')
-    
+
 def scanResponse(response):
     print("SCAN OUTPUT:")
     print(response)

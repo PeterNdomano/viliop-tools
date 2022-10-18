@@ -20,7 +20,7 @@ def main(argv):
             opts, args = getopt.getopt(argv[1:], "u:", ["url="]) #getting cmd options
             for opt, arg in opts:
                 if opt in ("-u", "--url"):
-                    targetUrl = arg
+                    targetUrl = "http://"+arg.strip()
                     print("Fingerprinting Web Server at {0}".format(targetUrl))
                     print("Please wait......")
                     server = bannerGrabbing(targetUrl)
